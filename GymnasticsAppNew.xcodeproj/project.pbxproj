@@ -1,0 +1,656 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		941AD4722732BFFE00EE15E7 /* AddEventAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941AD4712732BFFE00EE15E7 /* AddEventAlert.swift */; };
+		946F3F1827188344002CAF92 /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F3F1727188344002CAF92 /* EventsView.swift */; };
+		946F3F1D271887DF002CAF92 /* EventPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F3F1C271887DF002CAF92 /* EventPageView.swift */; };
+		94AC2B2D270E2321002E6E18 /* GymEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AC2B2C270E2321002E6E18 /* GymEvent.swift */; };
+		94AC2B35270E2685002E6E18 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AC2B34270E2685002E6E18 /* LoginView.swift */; };
+		94CCA4D4270B2FFD00854AC1 /* GymnasticsAppNewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CCA4D3270B2FFD00854AC1 /* GymnasticsAppNewApp.swift */; };
+		94CCA4D6270B2FFD00854AC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CCA4D5270B2FFD00854AC1 /* ContentView.swift */; };
+		94CCA4D8270B300200854AC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94CCA4D7270B300200854AC1 /* Assets.xcassets */; };
+		94CCA4DB270B300200854AC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94CCA4DA270B300200854AC1 /* Preview Assets.xcassets */; };
+		94CCA4E6270B300300854AC1 /* GymnasticsAppNewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CCA4E5270B300300854AC1 /* GymnasticsAppNewTests.swift */; };
+		94CCA4F1270B300300854AC1 /* GymnasticsAppNewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CCA4F0270B300300854AC1 /* GymnasticsAppNewUITests.swift */; };
+		94CCA503270B30A100854AC1 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 94CCA502270B30A100854AC1 /* Realm */; };
+		94CCA505270B30A100854AC1 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 94CCA504270B30A100854AC1 /* RealmSwift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		94CCA4E2270B300300854AC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94CCA4C8270B2FFD00854AC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94CCA4CF270B2FFD00854AC1;
+			remoteInfo = GymnasticsAppNew;
+		};
+		94CCA4ED270B300300854AC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94CCA4C8270B2FFD00854AC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94CCA4CF270B2FFD00854AC1;
+			remoteInfo = GymnasticsAppNew;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		941AD4712732BFFE00EE15E7 /* AddEventAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventAlert.swift; sourceTree = "<group>"; };
+		946F3F1727188344002CAF92 /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
+		946F3F1C271887DF002CAF92 /* EventPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPageView.swift; sourceTree = "<group>"; };
+		94AC2B2C270E2321002E6E18 /* GymEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymEvent.swift; sourceTree = "<group>"; };
+		94AC2B34270E2685002E6E18 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		94CCA4D0270B2FFD00854AC1 /* GymnasticsAppNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymnasticsAppNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94CCA4D3270B2FFD00854AC1 /* GymnasticsAppNewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymnasticsAppNewApp.swift; sourceTree = "<group>"; };
+		94CCA4D5270B2FFD00854AC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		94CCA4D7270B300200854AC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		94CCA4DA270B300200854AC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		94CCA4DC270B300200854AC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94CCA4E1270B300300854AC1 /* GymnasticsAppNewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymnasticsAppNewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		94CCA4E5270B300300854AC1 /* GymnasticsAppNewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymnasticsAppNewTests.swift; sourceTree = "<group>"; };
+		94CCA4E7270B300300854AC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94CCA4EC270B300300854AC1 /* GymnasticsAppNewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymnasticsAppNewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		94CCA4F0270B300300854AC1 /* GymnasticsAppNewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymnasticsAppNewUITests.swift; sourceTree = "<group>"; };
+		94CCA4F2270B300300854AC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94CCA4CD270B2FFD00854AC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94CCA505270B30A100854AC1 /* RealmSwift in Frameworks */,
+				94CCA503270B30A100854AC1 /* Realm in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94CCA4DE270B300300854AC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94CCA4E9270B300300854AC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		94CCA4C7270B2FFD00854AC1 = {
+			isa = PBXGroup;
+			children = (
+				94CCA4D2270B2FFD00854AC1 /* GymnasticsAppNew */,
+				94CCA4E4270B300300854AC1 /* GymnasticsAppNewTests */,
+				94CCA4EF270B300300854AC1 /* GymnasticsAppNewUITests */,
+				94CCA4D1270B2FFD00854AC1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		94CCA4D1270B2FFD00854AC1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94CCA4D0270B2FFD00854AC1 /* GymnasticsAppNew.app */,
+				94CCA4E1270B300300854AC1 /* GymnasticsAppNewTests.xctest */,
+				94CCA4EC270B300300854AC1 /* GymnasticsAppNewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94CCA4D2270B2FFD00854AC1 /* GymnasticsAppNew */ = {
+			isa = PBXGroup;
+			children = (
+				94CCA509270B327B00854AC1 /* Models */,
+				94CCA50A270B328300854AC1 /* Views */,
+				94CCA4D3270B2FFD00854AC1 /* GymnasticsAppNewApp.swift */,
+				94CCA4D7270B300200854AC1 /* Assets.xcassets */,
+				94CCA4DC270B300200854AC1 /* Info.plist */,
+				94CCA4D9270B300200854AC1 /* Preview Content */,
+			);
+			path = GymnasticsAppNew;
+			sourceTree = "<group>";
+		};
+		94CCA4D9270B300200854AC1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				94CCA4DA270B300200854AC1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		94CCA4E4270B300300854AC1 /* GymnasticsAppNewTests */ = {
+			isa = PBXGroup;
+			children = (
+				94CCA4E5270B300300854AC1 /* GymnasticsAppNewTests.swift */,
+				94CCA4E7270B300300854AC1 /* Info.plist */,
+			);
+			path = GymnasticsAppNewTests;
+			sourceTree = "<group>";
+		};
+		94CCA4EF270B300300854AC1 /* GymnasticsAppNewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				94CCA4F0270B300300854AC1 /* GymnasticsAppNewUITests.swift */,
+				94CCA4F2270B300300854AC1 /* Info.plist */,
+			);
+			path = GymnasticsAppNewUITests;
+			sourceTree = "<group>";
+		};
+		94CCA509270B327B00854AC1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				94AC2B2C270E2321002E6E18 /* GymEvent.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		94CCA50A270B328300854AC1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				94CCA4D5270B2FFD00854AC1 /* ContentView.swift */,
+				94AC2B34270E2685002E6E18 /* LoginView.swift */,
+				946F3F1727188344002CAF92 /* EventsView.swift */,
+				946F3F1C271887DF002CAF92 /* EventPageView.swift */,
+				941AD4712732BFFE00EE15E7 /* AddEventAlert.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		94CCA4CF270B2FFD00854AC1 /* GymnasticsAppNew */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94CCA4F5270B300300854AC1 /* Build configuration list for PBXNativeTarget "GymnasticsAppNew" */;
+			buildPhases = (
+				94CCA4CC270B2FFD00854AC1 /* Sources */,
+				94CCA4CD270B2FFD00854AC1 /* Frameworks */,
+				94CCA4CE270B2FFD00854AC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GymnasticsAppNew;
+			packageProductDependencies = (
+				94CCA502270B30A100854AC1 /* Realm */,
+				94CCA504270B30A100854AC1 /* RealmSwift */,
+			);
+			productName = GymnasticsAppNew;
+			productReference = 94CCA4D0270B2FFD00854AC1 /* GymnasticsAppNew.app */;
+			productType = "com.apple.product-type.application";
+		};
+		94CCA4E0270B300300854AC1 /* GymnasticsAppNewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94CCA4F8270B300300854AC1 /* Build configuration list for PBXNativeTarget "GymnasticsAppNewTests" */;
+			buildPhases = (
+				94CCA4DD270B300300854AC1 /* Sources */,
+				94CCA4DE270B300300854AC1 /* Frameworks */,
+				94CCA4DF270B300300854AC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94CCA4E3270B300300854AC1 /* PBXTargetDependency */,
+			);
+			name = GymnasticsAppNewTests;
+			productName = GymnasticsAppNewTests;
+			productReference = 94CCA4E1270B300300854AC1 /* GymnasticsAppNewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		94CCA4EB270B300300854AC1 /* GymnasticsAppNewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94CCA4FB270B300300854AC1 /* Build configuration list for PBXNativeTarget "GymnasticsAppNewUITests" */;
+			buildPhases = (
+				94CCA4E8270B300300854AC1 /* Sources */,
+				94CCA4E9270B300300854AC1 /* Frameworks */,
+				94CCA4EA270B300300854AC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94CCA4EE270B300300854AC1 /* PBXTargetDependency */,
+			);
+			name = GymnasticsAppNewUITests;
+			productName = GymnasticsAppNewUITests;
+			productReference = 94CCA4EC270B300300854AC1 /* GymnasticsAppNewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94CCA4C8270B2FFD00854AC1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					94CCA4CF270B2FFD00854AC1 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					94CCA4E0270B300300854AC1 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 94CCA4CF270B2FFD00854AC1;
+					};
+					94CCA4EB270B300300854AC1 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 94CCA4CF270B2FFD00854AC1;
+					};
+				};
+			};
+			buildConfigurationList = 94CCA4CB270B2FFD00854AC1 /* Build configuration list for PBXProject "GymnasticsAppNew" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 94CCA4C7270B2FFD00854AC1;
+			packageReferences = (
+				94CCA501270B30A100854AC1 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
+			productRefGroup = 94CCA4D1270B2FFD00854AC1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94CCA4CF270B2FFD00854AC1 /* GymnasticsAppNew */,
+				94CCA4E0270B300300854AC1 /* GymnasticsAppNewTests */,
+				94CCA4EB270B300300854AC1 /* GymnasticsAppNewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		94CCA4CE270B2FFD00854AC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94CCA4DB270B300200854AC1 /* Preview Assets.xcassets in Resources */,
+				94CCA4D8270B300200854AC1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94CCA4DF270B300300854AC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94CCA4EA270B300300854AC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94CCA4CC270B2FFD00854AC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				946F3F1D271887DF002CAF92 /* EventPageView.swift in Sources */,
+				94AC2B2D270E2321002E6E18 /* GymEvent.swift in Sources */,
+				941AD4722732BFFE00EE15E7 /* AddEventAlert.swift in Sources */,
+				946F3F1827188344002CAF92 /* EventsView.swift in Sources */,
+				94CCA4D6270B2FFD00854AC1 /* ContentView.swift in Sources */,
+				94AC2B35270E2685002E6E18 /* LoginView.swift in Sources */,
+				94CCA4D4270B2FFD00854AC1 /* GymnasticsAppNewApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94CCA4DD270B300300854AC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94CCA4E6270B300300854AC1 /* GymnasticsAppNewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94CCA4E8270B300300854AC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94CCA4F1270B300300854AC1 /* GymnasticsAppNewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		94CCA4E3270B300300854AC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94CCA4CF270B2FFD00854AC1 /* GymnasticsAppNew */;
+			targetProxy = 94CCA4E2270B300300854AC1 /* PBXContainerItemProxy */;
+		};
+		94CCA4EE270B300300854AC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94CCA4CF270B2FFD00854AC1 /* GymnasticsAppNew */;
+			targetProxy = 94CCA4ED270B300300854AC1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		94CCA4F3270B300300854AC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		94CCA4F4270B300300854AC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		94CCA4F6270B300300854AC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"GymnasticsAppNew/Preview Content\"";
+				DEVELOPMENT_TEAM = V7ZARHW99F;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = GymnasticsAppNew/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = KMR.GymnasticsAppNew;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		94CCA4F7270B300300854AC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"GymnasticsAppNew/Preview Content\"";
+				DEVELOPMENT_TEAM = V7ZARHW99F;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = GymnasticsAppNew/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = KMR.GymnasticsAppNew;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		94CCA4F9270B300300854AC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V7ZARHW99F;
+				INFOPLIST_FILE = GymnasticsAppNewTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = KMR.GymnasticsAppNewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GymnasticsAppNew.app/GymnasticsAppNew";
+			};
+			name = Debug;
+		};
+		94CCA4FA270B300300854AC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V7ZARHW99F;
+				INFOPLIST_FILE = GymnasticsAppNewTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = KMR.GymnasticsAppNewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GymnasticsAppNew.app/GymnasticsAppNew";
+			};
+			name = Release;
+		};
+		94CCA4FC270B300300854AC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V7ZARHW99F;
+				INFOPLIST_FILE = GymnasticsAppNewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = KMR.GymnasticsAppNewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GymnasticsAppNew;
+			};
+			name = Debug;
+		};
+		94CCA4FD270B300300854AC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V7ZARHW99F;
+				INFOPLIST_FILE = GymnasticsAppNewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = KMR.GymnasticsAppNewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GymnasticsAppNew;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94CCA4CB270B2FFD00854AC1 /* Build configuration list for PBXProject "GymnasticsAppNew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94CCA4F3270B300300854AC1 /* Debug */,
+				94CCA4F4270B300300854AC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94CCA4F5270B300300854AC1 /* Build configuration list for PBXNativeTarget "GymnasticsAppNew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94CCA4F6270B300300854AC1 /* Debug */,
+				94CCA4F7270B300300854AC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94CCA4F8270B300300854AC1 /* Build configuration list for PBXNativeTarget "GymnasticsAppNewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94CCA4F9270B300300854AC1 /* Debug */,
+				94CCA4FA270B300300854AC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94CCA4FB270B300300854AC1 /* Build configuration list for PBXNativeTarget "GymnasticsAppNewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94CCA4FC270B300300854AC1 /* Debug */,
+				94CCA4FD270B300300854AC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		94CCA501270B30A100854AC1 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.16.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		94CCA502270B30A100854AC1 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94CCA501270B30A100854AC1 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		94CCA504270B30A100854AC1 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94CCA501270B30A100854AC1 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 94CCA4C8270B2FFD00854AC1 /* Project object */;
+}
