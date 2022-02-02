@@ -7,59 +7,27 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7DE33BC4-44C5-4679-855D-294C08DDC3F6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GymnasticsAppNew/Views/EventsView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4F418A63-E383-46D1-932F-4D24C0F3E014"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GymnasticsAppNew/Models/GymEvent.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "createGymnast(author:userRealm:)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "D81F3115-AB8C-4A2E-81B0-15FA3B51A288"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GymnasticsAppNew/Views/LoginView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "login()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "D81F3115-AB8C-4A2E-81B0-15FA3B51A288 - b0b5fcc3b348bc13"
+                  uuid = "D81F3115-AB8C-4A2E-81B0-15FA3B51A288 - 3cf21933cfa1040"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Result&lt;__C.RLMUser, Swift.Error&gt;) -&gt; () in GymnasticsAppNew.LoginView.(login in _1814BD83B2AF91882BFEF050CB38EDB7)() -&gt; ()"
                   moduleName = "GymnasticsAppNew"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/krunkel/Desktop/GymnasticsAppNew/GymnasticsAppNew/Views/LoginView.swift"
+                  urlString = "file:///Users/krunkel/Documents/github/GymnasticsAppNew/GymnasticsAppNew/Views/LoginView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "79"
@@ -67,14 +35,14 @@
                   offsetFromSymbolStart = "1278">
                </Location>
                <Location
-                  uuid = "D81F3115-AB8C-4A2E-81B0-15FA3B51A288 - 2475e6d2934f1187"
+                  uuid = "D81F3115-AB8C-4A2E-81B0-15FA3B51A288 - 970f3b821cfdbd5a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #2 (Swift.Result&lt;RealmSwift.Realm, Swift.Error&gt;) -&gt; () in closure #1 (Swift.Result&lt;__C.RLMUser, Swift.Error&gt;) -&gt; () in GymnasticsAppNew.LoginView.(login in _1814BD83B2AF91882BFEF050CB38EDB7)() -&gt; ()"
                   moduleName = "GymnasticsAppNew"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/krunkel/Desktop/GymnasticsAppNew/GymnasticsAppNew/Views/LoginView.swift"
+                  urlString = "file:///Users/krunkel/Documents/github/GymnasticsAppNew/GymnasticsAppNew/Views/LoginView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "82"
@@ -87,40 +55,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9AB5FFA6-8DBE-4868-907F-06F5B505ECED"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GymnasticsAppNew/Views/LoginView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "signup()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "56A79C14-0A11-475C-A81E-F36AC85979CC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GymnasticsAppNew/Views/LoginView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "signup()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "09B4AC8D-6C18-4C94-8512-4DBEC106572A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GymnasticsAppNew/Views/EventPageView.swift"

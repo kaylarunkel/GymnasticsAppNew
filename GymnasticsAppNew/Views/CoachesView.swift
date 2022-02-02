@@ -1,28 +1,21 @@
 //
-//  LoginView.swift
+//  CoachesView.swift
 //  GymnasticsAppNew
 //
-//  Created by Kayla Runkel on 10/6/21.
+//  Created by Kayla Runkel on 2/1/22.
 //
 
 import SwiftUI
 import RealmSwift
 
-struct LoginView: View {
-    
+struct CoachesView: View {
     
     @Binding var username: String
     
     @State private var email = ""
     @State private var password = ""
-    @State private var newUser = false //stopped here w/ video at 34:22
-    
-    /*let userRealm: Realm
-    init(userRealmConfiguration: Realm.Configuration) {
-        self.userRealm = try! Realm(configuration: userRealmConfiguration)
-        //self.username = ""
-        super.init(nibName: nil, bundle: nil)
-    }*/
+    @State private var newUser = false
+    @State private var teamCode = ""
     
     var body: some View {
         VStack(spacing: 16) {
@@ -31,23 +24,23 @@ struct LoginView: View {
             Button(action: {newUser.toggle() }) {
                 HStack {
                     Image(systemName: newUser ? "checkmark.square" : "square")
-                    Text("Register as new gymnast")
+                    Text("Register as new coach")
                     Spacer()
                 }
             }
-            Button(action: userAction) {
-                Text(newUser ? "Register as new gymnast" : "Log in")
+            
+            if newUser {
+                TextField("team code", text: $teamCode)
             }
-            /*Button(action: createCoach(coachName: email, userRealm: globals.userRealm)) {
-                Text("I Am A Coach")
-            }*/
-            NavigationLink(destination: CoachesView(username: $email)) {
-                Text("I Am A Coach")
+            
+            Button(action: userAction) {
+                Text(newUser ? "Register as new coach" : "Log in")
             }
         }
-        .navigationBarTitle("Gymnast Log In", displayMode: .inline)
+        .navigationBarTitle("Coach Log In", displayMode: .inline)
         .padding()
     }
+    
     private func userAction() {
         if newUser {
             signup()
@@ -55,7 +48,7 @@ struct LoginView: View {
             login()
         }
     }
-    
+
     private func signup() {
         app.emailPasswordAuth.registerUser(email: email, password: password) {error in
             if let error = error {
@@ -64,12 +57,10 @@ struct LoginView: View {
                 login()
             }
         }
-        
+
     }
-    
-    //function when the user clicks to log in
+
     private func login() {
-        //_in says that we are not going to use given callback function
         print("email: \(email)")
         print("password: \(password)")
         app.login(credentials: .emailPassword(email: email, password: password)) { _ in
@@ -90,18 +81,12 @@ struct LoginView: View {
                 print("failed to open realm: \(error.localizedDescription)")
             
             case .success(let userRealm):
-                createGymnast(author: email, userRealm: userRealm)
+                createCoach(coachName: username, userRealm: userRealm)
             }
             
             }
         }
-        }
-        
     }
+    
+}
 
-
-/*struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView(username: .constant("Billy"))
-    }
-}*/

@@ -20,6 +20,7 @@
 		94CCA4F1270B300300854AC1 /* GymnasticsAppNewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CCA4F0270B300300854AC1 /* GymnasticsAppNewUITests.swift */; };
 		94CCA503270B30A100854AC1 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 94CCA502270B30A100854AC1 /* Realm */; };
 		94CCA505270B30A100854AC1 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 94CCA504270B30A100854AC1 /* RealmSwift */; };
+		94F68D6E27A9718C00F43E3E /* CoachesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F68D6D27A9718C00F43E3E /* CoachesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		94CCA4EC270B300300854AC1 /* GymnasticsAppNewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymnasticsAppNewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CCA4F0270B300300854AC1 /* GymnasticsAppNewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymnasticsAppNewUITests.swift; sourceTree = "<group>"; };
 		94CCA4F2270B300300854AC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94F68D6D27A9718C00F43E3E /* CoachesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			children = (
 				94CCA4D5270B2FFD00854AC1 /* ContentView.swift */,
 				94AC2B34270E2685002E6E18 /* LoginView.swift */,
+				94F68D6D27A9718C00F43E3E /* CoachesView.swift */,
 				946F3F1727188344002CAF92 /* EventsView.swift */,
 				946F3F1C271887DF002CAF92 /* EventPageView.swift */,
 				941AD4712732BFFE00EE15E7 /* AddEventAlert.swift */,
@@ -306,6 +309,7 @@
 				941AD4722732BFFE00EE15E7 /* AddEventAlert.swift in Sources */,
 				946F3F1827188344002CAF92 /* EventsView.swift in Sources */,
 				94CCA4D6270B2FFD00854AC1 /* ContentView.swift in Sources */,
+				94F68D6E27A9718C00F43E3E /* CoachesView.swift in Sources */,
 				94AC2B35270E2685002E6E18 /* LoginView.swift in Sources */,
 				94CCA4D4270B2FFD00854AC1 /* GymnasticsAppNewApp.swift in Sources */,
 			);

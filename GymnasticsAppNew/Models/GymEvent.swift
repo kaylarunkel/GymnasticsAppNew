@@ -11,6 +11,7 @@ import RealmSwift
 struct globalVariables {
     
     var gymnast: Gymnast = Gymnast()
+    var coach: Coach = Coach()
     var userRealm: Realm? = nil
 
 }
@@ -58,6 +59,7 @@ var globals = globalVariables()
 @objcMembers class Gymnast: Object, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var _id = ObjectId.generate()
     @Persisted var author = "" //name of the gymnast
+    @Persisted var teamCode = ""
     
     //@Persisted var competition: Competition?
     @Persisted var competitions: List<Competition>
@@ -65,6 +67,7 @@ var globals = globalVariables()
     convenience init(author: String) {
         self.init()
         self.author = author
+        self.teamCode = teamCode
         self.competitions = List<Competition>()
         //self.competitions.append(objectsIn: competitions)
     }
@@ -80,6 +83,18 @@ var globals = globalVariables()
     convenience init(event: String) {
         self.init()
         self.event = event
+    }
+}
+
+@objcMembers class Coach: Object, ObjectKeyIdentifiable {
+    @Persisted(primaryKey: true) var _id = ObjectId.generate()
+    @Persisted var coachName = "" //name of coach
+    @Persisted var teamCode = ""
+    
+    convenience init(coachName: String) {
+        self.init()
+        self.coachName = coachName
+        self.teamCode = teamCode
     }
 }
 
@@ -102,6 +117,9 @@ func createGymnast(author: String, userRealm: Realm) {
     
     //if there is no gymnast with the name of the user that just logged in, create a new gymnast for the new user
     if gymnasts.count == 0 {
+        
+        //ask for team code
+        
         gymnast = Gymnast(author: author)
         
         try! userRealm.write {
@@ -138,6 +156,31 @@ func getCompetition(event: String) -> Competition? {
         }
     }
     return nil
+}
+
+func createCoach(coachName: String, userRealm: Realm) {
+    globals.userRealm = userRealm
+    
+    var coaches: Results<Coach>
+    var coach: Coach
+    
+    coaches = userRealm.objects(Coach.self).where {
+        $0.coachName == coachName
+    }
+    
+    if coaches.count == 0 {
+        coach = Coach(coachName: coachName)
+        
+        try! userRealm.write {
+            userRealm.add(coach)
+        }
+        print("user not found. creating coach: \(coachName)")
+    }
+    else {
+        coach = coaches[0]
+        print("found coach \(coachName) in realm")
+    }
+    globals.coach = coach
 }
 
 

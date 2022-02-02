@@ -55,7 +55,27 @@ struct EventsView: View {
                             Text(globals.gymnast.competitions[index].event)
                         }
                     }*/
-                }
+                //}
+                
+                //NEW
+               /* List(viewModel.competitions) { competition in
+                    let index = viewModel.competitons.firstIndex(where: { $0.id == competition })!
+                    
+                    NavigationLink(destination: CompetitionEdit(competiton: $viewModel.competitions[index])) {
+                        CompetitionRow(competition: competition)
+                    }
+                }*/
+            
+           /* List {
+                ForEach(viewModel.competitions, id: \.self) { competition in
+                    let index = viewModel.competitons.firstIndex(where: { $0.id == competition })!
+                    
+                    NavigationLink(destination: CompetitionEdit(competiton: $viewModel.competitions[index])) {
+                        CompetitionRow(competition: competition)
+                    }
+                }*/
+            }
+                //NEW^^
                 
                 Button("Add Event") {
                     self.isPresented = true
@@ -94,11 +114,11 @@ struct EventsView: View {
 }*/
 
 
-struct EventsView_Previews: PreviewProvider {
+/*struct EventsView_Previews: PreviewProvider {
     static var previews: some View {
         EventsView(username: "", text: "")
     }
-}
+}*/
 
 
 /*
@@ -114,3 +134,4 @@ ZStack{
     })
 }
 */
+

@@ -110,25 +110,7 @@ struct EventPageView: View {
     
     //save function to send data to Realm
     private func save() {
-        //$events.append(GymEvent(username: username, event: event, vaultScore: vaultScore, barsScore: barsScore, beamScore: beamScore, floorScore: floorScore, events: GymEvent().events))
-        //Gymnast.competitions.append(event: competition, vaultScore: vaultScore, barsScore = barsScore, beamScore = beamScore, floorScore = floorScore)
-        //try! realm.write {
-            //realm.add(Gymnast())
-        //}
-        //self.$competitions.append(Gymnast(author: username, competition: Competition()))
-        /*try! realm.write {
-            let competition = Competition()
-            competition.event = event
-            competition.vaultScore = vaultScore
-            competition.barsScore = barsScore
-            competition.beamScore = beamScore
-            competition.floorScore = floorScore
-            let gymnast = Gymnast(author: username, competitions: [competition])
-            realm.add(gymnast)
-        }*/
-        
-        //var competition = getCompetition(event: event)
-        
+
         try! globals.userRealm!.write {
             competition!.vaultScore = Float(vaultScore)
             competition!.barsScore = Float(barsScore)
