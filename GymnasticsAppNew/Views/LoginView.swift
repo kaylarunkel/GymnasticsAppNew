@@ -16,6 +16,7 @@ struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var newUser = false //stopped here w/ video at 34:22
+    @State var teamCode = ""
     
     /*let userRealm: Realm
     init(userRealmConfiguration: Realm.Configuration) {
@@ -35,13 +36,24 @@ struct LoginView: View {
                     Spacer()
                 }
             }
-            Button(action: userAction) {
+            /*Button(action: userAction) {
+                Text(newUser ? "Register as new gymnast" : "Log in")
+                NavigationLink(destination: EventsView)
+            }*/
+            
+            NavigationLink(destination: EventsView(username: username, text: "")) {
                 Text(newUser ? "Register as new gymnast" : "Log in")
             }
-            /*Button(action: createCoach(coachName: email, userRealm: globals.userRealm)) {
+            
+            /*Button(action: createCoach(coachName: email, userRealm: globals.userRealm!, teamCode: teamCode)) {
                 Text("I Am A Coach")
             }*/
-            NavigationLink(destination: CoachesView(username: $email)) {
+            
+            if newUser {
+                TextField("team code", text: $teamCode)
+            }
+            
+            NavigationLink(destination: CoachesView(username: $email, teamCode: $teamCode)) {
                 Text("I Am A Coach")
             }
         }
@@ -90,7 +102,7 @@ struct LoginView: View {
                 print("failed to open realm: \(error.localizedDescription)")
             
             case .success(let userRealm):
-                createGymnast(author: email, userRealm: userRealm)
+                createGymnast(author: email, userRealm: userRealm, teamCode: teamCode)
             }
             
             }

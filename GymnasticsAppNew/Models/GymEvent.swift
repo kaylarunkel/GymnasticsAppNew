@@ -64,7 +64,7 @@ var globals = globalVariables()
     //@Persisted var competition: Competition?
     @Persisted var competitions: List<Competition>
     
-    convenience init(author: String) {
+    convenience init(author: String, teamCode: String) {
         self.init()
         self.author = author
         self.teamCode = teamCode
@@ -91,14 +91,14 @@ var globals = globalVariables()
     @Persisted var coachName = "" //name of coach
     @Persisted var teamCode = ""
     
-    convenience init(coachName: String) {
+    convenience init(coachName: String, teamCode: String) {
         self.init()
         self.coachName = coachName
         self.teamCode = teamCode
     }
 }
 
-func createGymnast(author: String, userRealm: Realm) {
+func createGymnast(author: String, userRealm: Realm, teamCode: String) {
     
     globals.userRealm = userRealm
     
@@ -120,7 +120,7 @@ func createGymnast(author: String, userRealm: Realm) {
         
         //ask for team code
         
-        gymnast = Gymnast(author: author)
+        gymnast = Gymnast(author: author, teamCode: teamCode)
         
         try! userRealm.write {
             userRealm.add(gymnast)
@@ -134,6 +134,21 @@ func createGymnast(author: String, userRealm: Realm) {
     
     globals.gymnast = gymnast
     
+}
+
+func gatherGymnasts(userRealm: Realm, teamCode: String) -> Array<String> {
+    globals.userRealm = userRealm
+    
+    var gymnastArray: Array<String> = []
+    
+    var gymnasts: Results<Gymnast>
+    gymnasts = userRealm.objects(Gymnast.self).where {
+        $0.teamCode == teamCode
+    }
+    for gymnast in gymnasts {
+        gymnastArray.append(gymnast.author)
+    }
+    return gymnastArray
 }
 
 func buildEventNameArray() -> Array<String> {
@@ -158,7 +173,7 @@ func getCompetition(event: String) -> Competition? {
     return nil
 }
 
-func createCoach(coachName: String, userRealm: Realm) {
+func createCoach(coachName: String, userRealm: Realm, teamCode: String) {
     globals.userRealm = userRealm
     
     var coaches: Results<Coach>
@@ -169,7 +184,7 @@ func createCoach(coachName: String, userRealm: Realm) {
     }
     
     if coaches.count == 0 {
-        coach = Coach(coachName: coachName)
+        coach = Coach(coachName: coachName, teamCode: teamCode)
         
         try! userRealm.write {
             userRealm.add(coach)
@@ -181,6 +196,7 @@ func createCoach(coachName: String, userRealm: Realm) {
         print("found coach \(coachName) in realm")
     }
     globals.coach = coach
+    //CoachSeeGymnasts()
 }
 
 

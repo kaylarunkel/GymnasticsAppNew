@@ -15,7 +15,7 @@ struct CoachesView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var newUser = false
-    @State private var teamCode = ""
+    @Binding var teamCode: String
     
     var body: some View {
         VStack(spacing: 16) {
@@ -36,6 +36,10 @@ struct CoachesView: View {
             Button(action: userAction) {
                 Text(newUser ? "Register as new coach" : "Log in")
             }
+            /*NavigationLink(destination: CoachSeeGymnasts(teamCode: String)) {
+                Text(newUser ? "Register as new gymnast" : "Log in")
+            }*/
+             //not working
         }
         .navigationBarTitle("Coach Log In", displayMode: .inline)
         .padding()
@@ -81,7 +85,7 @@ struct CoachesView: View {
                 print("failed to open realm: \(error.localizedDescription)")
             
             case .success(let userRealm):
-                createCoach(coachName: username, userRealm: userRealm)
+                createCoach(coachName: username, userRealm: userRealm, teamCode: teamCode)
             }
             
             }

@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		941AD4722732BFFE00EE15E7 /* AddEventAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941AD4712732BFFE00EE15E7 /* AddEventAlert.swift */; };
+		946932B127B2F1CB000C8A93 /* GymnastInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946932B027B2F1CB000C8A93 /* GymnastInformation.swift */; };
 		946F3F1827188344002CAF92 /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F3F1727188344002CAF92 /* EventsView.swift */; };
 		946F3F1D271887DF002CAF92 /* EventPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F3F1C271887DF002CAF92 /* EventPageView.swift */; };
+		947899FD27AC61E500BD5BC7 /* CoachSeeGymnasts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947899FC27AC61E400BD5BC7 /* CoachSeeGymnasts.swift */; };
 		94AC2B2D270E2321002E6E18 /* GymEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AC2B2C270E2321002E6E18 /* GymEvent.swift */; };
 		94AC2B35270E2685002E6E18 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AC2B34270E2685002E6E18 /* LoginView.swift */; };
 		94CCA4D4270B2FFD00854AC1 /* GymnasticsAppNewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CCA4D3270B2FFD00854AC1 /* GymnasticsAppNewApp.swift */; };
@@ -42,8 +44,10 @@
 
 /* Begin PBXFileReference section */
 		941AD4712732BFFE00EE15E7 /* AddEventAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventAlert.swift; sourceTree = "<group>"; };
+		946932B027B2F1CB000C8A93 /* GymnastInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymnastInformation.swift; sourceTree = "<group>"; };
 		946F3F1727188344002CAF92 /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		946F3F1C271887DF002CAF92 /* EventPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPageView.swift; sourceTree = "<group>"; };
+		947899FC27AC61E400BD5BC7 /* CoachSeeGymnasts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachSeeGymnasts.swift; sourceTree = "<group>"; };
 		94AC2B2C270E2321002E6E18 /* GymEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymEvent.swift; sourceTree = "<group>"; };
 		94AC2B34270E2685002E6E18 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		94CCA4D0270B2FFD00854AC1 /* GymnasticsAppNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymnasticsAppNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +165,8 @@
 				94CCA4D5270B2FFD00854AC1 /* ContentView.swift */,
 				94AC2B34270E2685002E6E18 /* LoginView.swift */,
 				94F68D6D27A9718C00F43E3E /* CoachesView.swift */,
+				947899FC27AC61E400BD5BC7 /* CoachSeeGymnasts.swift */,
+				946932B027B2F1CB000C8A93 /* GymnastInformation.swift */,
 				946F3F1727188344002CAF92 /* EventsView.swift */,
 				946F3F1C271887DF002CAF92 /* EventPageView.swift */,
 				941AD4712732BFFE00EE15E7 /* AddEventAlert.swift */,
@@ -306,11 +312,13 @@
 			files = (
 				946F3F1D271887DF002CAF92 /* EventPageView.swift in Sources */,
 				94AC2B2D270E2321002E6E18 /* GymEvent.swift in Sources */,
+				947899FD27AC61E500BD5BC7 /* CoachSeeGymnasts.swift in Sources */,
 				941AD4722732BFFE00EE15E7 /* AddEventAlert.swift in Sources */,
 				946F3F1827188344002CAF92 /* EventsView.swift in Sources */,
 				94CCA4D6270B2FFD00854AC1 /* ContentView.swift in Sources */,
 				94F68D6E27A9718C00F43E3E /* CoachesView.swift in Sources */,
 				94AC2B35270E2685002E6E18 /* LoginView.swift in Sources */,
+				946932B127B2F1CB000C8A93 /* GymnastInformation.swift in Sources */,
 				94CCA4D4270B2FFD00854AC1 /* GymnasticsAppNewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

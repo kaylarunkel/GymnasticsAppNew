@@ -31,12 +31,14 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             Group {
-                if app.currentUser == nil {
+                /*if app.currentUser == nil {
                     LoginView(username: $username) //if no one is logged in, go to login screen
-                } else {
+                }
+                else {
                     EventsView(username: username, text: "") //when logged in, go to list of all events
                         .padding()
-                }
+                }*/
+                LoginView(username: $username)
             }
             .navigationBarTitle(username, displayMode: .inline)
             .navigationBarItems(trailing: app.currentUser != nil ? Button(action: logout) { Text("Logout") } : nil)
