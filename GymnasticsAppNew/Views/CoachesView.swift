@@ -16,7 +16,7 @@ struct CoachesView: View {
     @State private var password = ""
     @State private var newUser = false
     @Binding var teamCode: String
-    
+
     var body: some View {
         VStack(spacing: 16) {
             TextField("email address", text: $email)
@@ -33,13 +33,26 @@ struct CoachesView: View {
                 TextField("team code", text: $teamCode)
             }
             
-            Button(action: userAction) {
+            /*Button(action: userAction) {
                 Text(newUser ? "Register as new coach" : "Log in")
+            }*/
+            /*NavigationLink(destination: CoachSeeGymnasts(teamCode: teamCode, userRealm: globals.userRealm!)) {
+                //Text(newUser ? "Register as new gymnast" : "Log in")
+                Button(action: userAction) {
+                    Text(newUser ? "Register as new coach" : "Log in")
+                }
+            }*/
+            
+            Button(action: userAction) {
+                    Text(newUser ? "Register as new coach" : "Log in")
+                }
+            NavigationLink(destination: CoachSeeGymnasts(teamCode: teamCode, userRealm: globals.userRealm!)) {
+                Text("place holder") //can i include this is ContentView?
             }
-            /*NavigationLink(destination: CoachSeeGymnasts(teamCode: String)) {
+            /*NavigationLink(destination: CoachSeeGymnasts(teamCode: teamCode, userRealm: globals.userRealm!)) {
                 Text(newUser ? "Register as new gymnast" : "Log in")
             }*/
-             //not working
+             
         }
         .navigationBarTitle("Coach Log In", displayMode: .inline)
         .padding()

@@ -40,18 +40,29 @@ struct LoginView: View {
                 Text(newUser ? "Register as new gymnast" : "Log in")
                 NavigationLink(destination: EventsView)
             }*/
-            
-            NavigationLink(destination: EventsView(username: username, text: "")) {
-                Text(newUser ? "Register as new gymnast" : "Log in")
-            }
-            
-            /*Button(action: createCoach(coachName: email, userRealm: globals.userRealm!, teamCode: teamCode)) {
-                Text("I Am A Coach")
+           /* Button(action: self.userAction) { //error: userAction isn't getting run
+                NavigationLink(destination: EventsView(username: username, text: "")) {
+                    Text(newUser ? "Register as new gymnast" : "Log in")
+                }
             }*/
             
             if newUser {
                 TextField("team code", text: $teamCode)
             }
+            
+            Button(action: userAction) {
+                    Text(newUser ? "Register as new gymnast" : "Log in")
+                Spacer()
+                }
+            
+           
+            /*NavigationLink(destination: EventsView(username: username, text: "")) {
+                Text("Continue")
+            }*/
+            /*Button(action: createCoach(coachName: email, userRealm: globals.userRealm!, teamCode: teamCode)) {
+                Text("I Am A Coach")
+            }*/
+            
             
             NavigationLink(destination: CoachesView(username: $email, teamCode: $teamCode)) {
                 Text("I Am A Coach")

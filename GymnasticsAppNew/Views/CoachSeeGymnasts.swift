@@ -9,13 +9,15 @@ import SwiftUI
 import RealmSwift
 
 
-/*struct CoachSeeGymnasts: View {
+struct CoachSeeGymnasts: View {
     
     let teamCode: String
-    @State private var gymnastArray: Array<String>
+    @State private var gymnastArray: Array<String> = []
+    let userRealm: Realm
     
-    init(teamCode: String) {
+    init(teamCode: String, userRealm: Realm) {
         self.teamCode = teamCode
+        self.userRealm = userRealm
         self.gymnastArray = gatherGymnasts(userRealm: globals.userRealm!, teamCode: teamCode)
     }
     //@State private var gymnastArray = gatherGymnasts(userRealm: globals.userRealm!, teamCode: teamCode)
@@ -36,5 +38,5 @@ import RealmSwift
             }
         }
     }
-}*/
+}
 
