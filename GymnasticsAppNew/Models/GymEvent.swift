@@ -91,10 +91,13 @@ var globals = globalVariables()
     @Persisted var coachName = "" //name of coach
     @Persisted var teamCode = ""
     
+    @Persisted var gymnasts: List<Gymnast> //new
+    
     convenience init(coachName: String, teamCode: String) {
         self.init()
         self.coachName = coachName
         self.teamCode = teamCode
+        self.gymnasts = List<Gymnast>()
     }
 }
 
@@ -146,8 +149,11 @@ func gatherGymnasts(userRealm: Realm, teamCode: String) -> Array<String> {
         $0.teamCode == teamCode
     }
     for gymnast in gymnasts {
+        print(gymnast.author)
+        globals.coach.gymnasts.append(gymnast) //new
         gymnastArray.append(gymnast.author)
     }
+
     return gymnastArray
 }
 
@@ -197,6 +203,8 @@ func createCoach(coachName: String, userRealm: Realm, teamCode: String) {
     }
     globals.coach = coach
     //CoachSeeGymnasts()
+    CoachSeeGymnasts(teamCode: teamCode, userRealm: globals.userRealm!)
 }
+
 
 

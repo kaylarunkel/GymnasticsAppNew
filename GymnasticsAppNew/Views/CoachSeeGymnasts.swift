@@ -12,7 +12,7 @@ import RealmSwift
 struct CoachSeeGymnasts: View {
     
     let teamCode: String
-    @State private var gymnastArray: Array<String> = []
+    private var gymnastArray: Array<String> = []
     let userRealm: Realm
     
     init(teamCode: String, userRealm: Realm) {
@@ -20,11 +20,18 @@ struct CoachSeeGymnasts: View {
         self.userRealm = userRealm
         self.gymnastArray = gatherGymnasts(userRealm: globals.userRealm!, teamCode: teamCode)
     }
+    
     //@State private var gymnastArray = gatherGymnasts(userRealm: globals.userRealm!, teamCode: teamCode)
+
     
     var body: some View {
         ZStack {
             VStack {
+                Text("hello")
+                /*ForEach(gymnastArray, id: \.self) { gymnast in
+                    Text(gymnast)
+                    
+                }*/
                 List {
                     ForEach(gymnastArray, id: \.self) { gymnast in
                         NavigationLink(destination: GymnastInformation()
@@ -33,6 +40,7 @@ struct CoachSeeGymnasts: View {
                             Text(gymnast)
                         }
                     }
+                    
 
                 }
             }

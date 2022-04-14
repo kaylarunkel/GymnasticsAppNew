@@ -15,8 +15,9 @@ struct LoginView: View {
     
     @State private var email = ""
     @State private var password = ""
-    @State private var newUser = false //stopped here w/ video at 34:22
+    @State var newUser = false //stopped here w/ video at 34:22
     @State var teamCode = ""
+    @State var areYouCoach = false
     
     /*let userRealm: Realm
     init(userRealmConfiguration: Realm.Configuration) {
@@ -26,9 +27,38 @@ struct LoginView: View {
     }*/
     
     var body: some View {
-        VStack(spacing: 16) {
+        VStack(spacing: 20) {
+            Spacer(minLength: 30)
+            Text("Login")
+                .font(.title)
+                .bold()
+                .frame(maxWidth: .infinity, alignment: .leading)
+            Text("Sign in here to continue.")
+                //.font(.caption)
+                .frame(maxWidth: .infinity, alignment: .leading)
             TextField("email address", text: $email)
+                //.frame(maxWidth: .infinity, alignment: .center)
+                //.multilineTextAlignment(.center)
+                .padding()
+                .background(Color.gray).opacity(0.6)
+                .cornerRadius(5.0)
+                .padding(.bottom, 20)
             SecureField("password", text: $password) //makes it so you can't see what is typed
+                //.frame(maxWidth: .infinity, alignment: .center)
+                //.multilineTextAlignment(.center)
+                .padding()
+                .background(Color.gray).opacity(0.6)
+                .cornerRadius(5.0)
+                .padding(.bottom, 20)
+            
+            if newUser {
+                TextField("team code", text: $teamCode)
+                    .padding()
+                    .background(Color.gray).opacity(0.6)
+                    .cornerRadius(5.0)
+                    .padding(.bottom, 20)
+            }
+            
             Button(action: {newUser.toggle() }) {
                 HStack {
                     Image(systemName: newUser ? "checkmark.square" : "square")
@@ -36,6 +66,16 @@ struct LoginView: View {
                     Spacer()
                 }
             }
+            .foregroundColor(Color.black)
+            
+            /*Button(action: {areYouCoach.toggle() }) {
+                HStack {
+                    Image(systemName: areYouCoach ? "checkmark.square" : "square")
+                    Text("Register as new coach")
+                    Spacer()
+                }
+            }*/
+
             /*Button(action: userAction) {
                 Text(newUser ? "Register as new gymnast" : "Log in")
                 NavigationLink(destination: EventsView)
@@ -46,14 +86,30 @@ struct LoginView: View {
                 }
             }*/
             
-            if newUser {
+            /*if newUser {
                 TextField("team code", text: $teamCode)
-            }
+                    .padding()
+                    .background(Color.gray).opacity(0.6)
+                    .cornerRadius(5.0)
+                    .padding(.bottom, 20)
+            }*/
+            
             
             Button(action: userAction) {
-                    Text(newUser ? "Register as new gymnast" : "Log in")
+                    Text(newUser ? "Register as new gymnast" : "Log in as gymnast")
                 Spacer()
-                }
+            }
+            .font(.headline)
+            .foregroundColor(Color.black)
+            .padding()
+            .frame(width: 280, height: 60)
+            .background(Color.pink).opacity(0.6)
+            .cornerRadius(15.0)
+            
+            //.brightness(40)
+            /*Button(action: userAction) {
+                Text(areYouCoach ? "Register as new coach" : "Log in as coach")
+            }*/
             
            
             /*NavigationLink(destination: EventsView(username: username, text: "")) {
@@ -63,14 +119,30 @@ struct LoginView: View {
                 Text("I Am A Coach")
             }*/
             
+            /*Button(action: areYouCoachFunc) {
+                HStack {
+                    Image(systemName: areYouCoach ? "checkmark.square" : "square")
+                    Text("I Am A Coach")
+                }
+            }
+            .foregroundColor(Color.black)
+            .frame(maxHeight: .infinity, alignment: .bottom)*/
             
             NavigationLink(destination: CoachesView(username: $email, teamCode: $teamCode)) {
-                Text("I Am A Coach")
+                Text("Continue As Coach")
             }
+            .frame(maxHeight: .infinity, alignment: .bottom)
+            .foregroundColor(Color.pink)
         }
         .navigationBarTitle("Gymnast Log In", displayMode: .inline)
         .padding()
     }
+    
+    private func areYouCoachFunc() {
+        newUser == true
+        userAction()
+    }
+    
     private func userAction() {
         if newUser {
             signup()
@@ -113,7 +185,14 @@ struct LoginView: View {
                 print("failed to open realm: \(error.localizedDescription)")
             
             case .success(let userRealm):
-                createGymnast(author: email, userRealm: userRealm, teamCode: teamCode)
+                
+                if areYouCoach == true {
+                    createCoach(coachName: email, userRealm: userRealm, teamCode: teamCode)
+                }
+                else {
+                    createGymnast(author: email, userRealm: userRealm, teamCode: teamCode)
+                }
+                
             }
             
             }

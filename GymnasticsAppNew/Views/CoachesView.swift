@@ -18,9 +18,39 @@ struct CoachesView: View {
     @Binding var teamCode: String
 
     var body: some View {
+        NavigationView {
         VStack(spacing: 16) {
+            Spacer(minLength: 30)
+            Text("Login")
+                .font(.title)
+                .bold()
+                .frame(maxWidth: .infinity, alignment: .leading)
+            Text("Sign in here to continue.")
+                //.font(.caption)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            Text("Please reenter your username and password.")
+                //.font(.caption)
+                .frame(maxWidth: .infinity, alignment: .leading)
             TextField("email address", text: $email)
+                .padding()
+                .background(Color.gray).opacity(0.6)
+                .cornerRadius(5.0)
+                .padding(.bottom, 20)
             SecureField("password", text: $password) //makes it so you can't see what is typed
+                .padding()
+                .background(Color.gray).opacity(0.6)
+                .cornerRadius(5.0)
+                .padding(.bottom, 20)
+            
+            
+            if newUser {
+                TextField("team code", text: $teamCode)
+                    .padding()
+                    .background(Color.gray).opacity(0.6)
+                    .cornerRadius(5.0)
+                    .padding(.bottom, 20)
+            }
+            
             Button(action: {newUser.toggle() }) {
                 HStack {
                     Image(systemName: newUser ? "checkmark.square" : "square")
@@ -29,9 +59,6 @@ struct CoachesView: View {
                 }
             }
             
-            if newUser {
-                TextField("team code", text: $teamCode)
-            }
             
             /*Button(action: userAction) {
                 Text(newUser ? "Register as new coach" : "Log in")
@@ -47,7 +74,7 @@ struct CoachesView: View {
                     Text(newUser ? "Register as new coach" : "Log in")
                 }
             NavigationLink(destination: CoachSeeGymnasts(teamCode: teamCode, userRealm: globals.userRealm!)) {
-                Text("place holder") //can i include this is ContentView?
+                Text("Continue as coach") //can i include this is ContentView?
             }
             /*NavigationLink(destination: CoachSeeGymnasts(teamCode: teamCode, userRealm: globals.userRealm!)) {
                 Text(newUser ? "Register as new gymnast" : "Log in")
@@ -56,6 +83,7 @@ struct CoachesView: View {
         }
         .navigationBarTitle("Coach Log In", displayMode: .inline)
         .padding()
+    }
     }
     
     private func userAction() {

@@ -35,8 +35,13 @@ struct ContentView: View {
                     LoginView(username: $username) //if no one is logged in, go to login screen
                 }
                 else {
-                    EventsView(username: username, text: "") //when logged in, go to list of all events
-                        .padding()
+                    /*if getAreYouCoach() == true {
+                        CoachSeeGymnasts(teamCode: LoginView.teamCode, userRealm: globals.userRealm!)
+                    }
+                    else {*/
+                        EventsView(username: username, text: "") //when logged in, go to list of all events
+                            .padding()
+                    //}
                 }
                 //LoginView(username: $username)
             }
