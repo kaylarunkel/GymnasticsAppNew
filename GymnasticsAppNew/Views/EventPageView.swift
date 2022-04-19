@@ -46,32 +46,36 @@ struct EventPageView: View {
         VStack {
             ScrollView(.vertical) {
                 VStack {
-                    HStack {
-                        Text("Vault Score: ")
+                    VStack {
+                        Text("Vault Score: \(String((competition?.vaultScore)!))")
+                        
                         TextField("Enter vault score", text: $vaultScore)
                             .padding()
                             .background(Color.gray.opacity(0.3).cornerRadius(10))
                             .font(.headline)
                     }
                     Text("\(vaultScore)")
-                    HStack {
-                        Text("Bars Score: ")
+                    VStack {
+                        Text("Bars Score: \(String((competition?.barsScore)!))")
+
                         TextField("Enter bars score", text: $barsScore)
                             .padding()
                             .background(Color.gray.opacity(0.3).cornerRadius(10))
                             .font(.headline)
                     }
                     Text("\(barsScore)")
-                    HStack {
-                        Text("Beam Score: ")
+                    VStack {
+                        Text("Beam Score: \(String((competition?.beamScore)!))")
+
                         TextField("Enter beam score", text: $beamScore)
                             .padding()
                             .background(Color.gray.opacity(0.3).cornerRadius(10))
                             .font(.headline)
                     }
                     Text("\(beamScore)")
-                    HStack {
-                        Text("Floor Score: ")
+                    VStack {
+                        Text("Floor Score: \(String((competition?.floorScore)!))")
+
                         TextField("Enter floor score", text: $floorScore)
                             .padding()
                             .background(Color.gray.opacity(0.3).cornerRadius(10))

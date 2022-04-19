@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		941AD4722732BFFE00EE15E7 /* AddEventAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941AD4712732BFFE00EE15E7 /* AddEventAlert.swift */; };
+		943E6ED5280F32C1002FC410 /* GymnastScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943E6ED4280F32C1002FC410 /* GymnastScores.swift */; };
 		946932B127B2F1CB000C8A93 /* GymnastInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946932B027B2F1CB000C8A93 /* GymnastInformation.swift */; };
 		946F3F1827188344002CAF92 /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F3F1727188344002CAF92 /* EventsView.swift */; };
 		946F3F1D271887DF002CAF92 /* EventPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F3F1C271887DF002CAF92 /* EventPageView.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		941AD4712732BFFE00EE15E7 /* AddEventAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventAlert.swift; sourceTree = "<group>"; };
+		943E6ED4280F32C1002FC410 /* GymnastScores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymnastScores.swift; sourceTree = "<group>"; };
 		946932B027B2F1CB000C8A93 /* GymnastInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymnastInformation.swift; sourceTree = "<group>"; };
 		946F3F1727188344002CAF92 /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		946F3F1C271887DF002CAF92 /* EventPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPageView.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				94F68D6D27A9718C00F43E3E /* CoachesView.swift */,
 				947899FC27AC61E400BD5BC7 /* CoachSeeGymnasts.swift */,
 				946932B027B2F1CB000C8A93 /* GymnastInformation.swift */,
+				943E6ED4280F32C1002FC410 /* GymnastScores.swift */,
 				946F3F1727188344002CAF92 /* EventsView.swift */,
 				946F3F1C271887DF002CAF92 /* EventPageView.swift */,
 				941AD4712732BFFE00EE15E7 /* AddEventAlert.swift */,
@@ -320,6 +323,7 @@
 				94AC2B35270E2685002E6E18 /* LoginView.swift in Sources */,
 				946932B127B2F1CB000C8A93 /* GymnastInformation.swift in Sources */,
 				94CCA4D4270B2FFD00854AC1 /* GymnasticsAppNewApp.swift in Sources */,
+				943E6ED5280F32C1002FC410 /* GymnastScores.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

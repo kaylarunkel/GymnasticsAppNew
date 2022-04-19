@@ -9,13 +9,29 @@ import SwiftUI
 import RealmSwift
 
 struct GymnastInformation: View {
+    
+    let gymnast: String
+    @State private var events = buildEventNameArray()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            VStack {
+                List {
+                    ForEach(events, id: \.self) { event in
+                        NavigationLink(destination: GymnastScores(gymnast: gymnast, event: event)
+                                        .environment(\.realmConfiguration, app.currentUser!.configuration(partitionValue: event))
+                        ) {
+                            Text(event)
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
-struct GymnastInformation_Previews: PreviewProvider {
-    static var previews: some View {
-        GymnastInformation()
-    }
-}
+
+
+
+//find gymnast in realm
+//show competitions linked to gymnast

@@ -34,7 +34,7 @@ struct CoachSeeGymnasts: View {
                 }*/
                 List {
                     ForEach(gymnastArray, id: \.self) { gymnast in
-                        NavigationLink(destination: GymnastInformation()
+                        NavigationLink(destination: GymnastInformation(gymnast: gymnast) //pass in gymnast
                                         .environment(\.realmConfiguration, app.currentUser!.configuration(partitionValue: gymnast))
                         ) {
                             Text(gymnast)
